@@ -164,7 +164,7 @@ int decompress(uint8_t* comp_rom, uint8_t* file_offset_table, uint8_t* buffer, u
   return warnings;
 }
 
-int main(unsigned int argc, const char* argv[]) {
+int main(int argc, const char* argv[]) {
 
   if (argc == 1) {
     printf("Give me the path to your ZoOT ROM!\n");
@@ -221,7 +221,7 @@ int main(unsigned int argc, const char* argv[]) {
   }
 
   printf("File offset table found at 0x%08x\n", (file_offset_table - data));
-  
+
   // Calculate size needed for decompressed rom
   decomp_size = calcDecompSize(comp_size, file_offset_table);
   uint8_t* decomp_rom = new uint8_t[decomp_size];

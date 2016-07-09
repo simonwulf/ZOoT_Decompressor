@@ -17,7 +17,7 @@ static uint32_t endianSwap32(uint32_t value) {
     (value & 0xff000000) >> 24;
 }
 
-static struct YAZ0Header {
+struct YAZ0Header {
   uint8_t YAZ0[4];
   uint32_t decomp_size;
   uint8_t padding[8];
