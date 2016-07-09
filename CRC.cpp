@@ -42,7 +42,7 @@ int N64CalcCRC(unsigned int *crc, unsigned char *data) {
 
     i += 4;
   }
-  
+
   crc[0] = t6 ^ t4 ^ t3;
   crc[1] = t5 ^ t2 ^ t1;
 
